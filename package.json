@@ -4,8 +4,8 @@
     "description": "A simple Node.js app for demonstrating GitHub Actions build",
     "main": "index.js",
     "scripts": {
-      "build": "echo 'Building...' && node index.js",
-      "test": "echo 'Test running...' && exit 0"
+      "build": "echo 'Building...' && exit 0",
+      "test": "echo 'Test running...' && node index.js"
     },
     "keywords": [],
     "author": "",
