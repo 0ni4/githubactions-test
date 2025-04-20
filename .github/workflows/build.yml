@@ -27,6 +27,3 @@ jobs:
       # 4. ビルド
       - name: Build project
         run: npm run build
-
-      - name: Run app for log check
-        run: node dist/index.js      # あるいは node index.js

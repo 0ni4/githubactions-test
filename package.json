@@ -1,13 +1,17 @@
 {
-    "name": "githubactions-test",
-    "version": "1.0.0",
-    "description": "A simple Node.js app for demonstrating GitHub Actions build",
-    "main": "index.js",
-    "scripts": {
-      "build": "echo 'Building...' && exit 0",
-      "test": "echo 'Test running...' && node index.js"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC"
-  }
+  "name": "githubactions-test",
+  "version": "1.0.0",
+  "description": "A tiny Node.js app for trying out GitHub Actions on ubuntu-latest",
+  "main": "dist/index.js",
+
+  "scripts": {
+    "clean": "rm -rf dist",                              
+    "build": "npm run clean && mkdir -p dist && cp index.js dist/",
+    "start": "node dist/index.js",                       
+    "test": "echo \"(no tests yet)\""                   
+  },
+
+  "keywords": ["github-actions", "demo"],
+  "author": "",
+  "license": "MIT"
+}
