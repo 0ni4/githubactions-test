@@ -6,7 +6,7 @@
 
   "scripts": {
     "clean": "rm -rf dist",                              
-    "build": "npm run clean && mkdir -p dist && cp index.js dist/",
+    "build": "npm run clean && mkdir -p dist && cp index.js dist/ && node dist/index.js",
     "start": "node dist/index.js",                       
     "test": "echo \"(no tests yet)\""                   
   },
