@@ -1,0 +1,29 @@
+name: Build
+
+# イベントを指定
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build_job:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. コードをチェックアウト
+      - uses: actions/checkout@v2
+
+      # 2. Node.js のセットアップ (バージョンは適宜変更可)
+      - name: Set up Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      # 3. 依存関係のインストール
+      - name: Install dependencies
+        run: npm install
+
+      # 4. ビルド
+      - name: Build project
+        run: npm run build
